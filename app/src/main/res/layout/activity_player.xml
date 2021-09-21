@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1"
+    android:orientation="vertical"
+    android:weightSum="0"
+    tools:context=".Player">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="7"
+      android:gravity="center"
+      android:orientation="vertical"
+      tools:ignore="Suspicious0dp">
+
+    <!--Track/song name display-->
+    <TextView
+        android:id="@+id/txtsn"
+        android:layout_margin="20dp"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:text="Track Name"
+        android:textColor="#fff"
+        android:textSize="22sp"
+        android:textAlignment="center"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <!--Music Icon-->
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ico1"
+        android:layout_width="250dp"
+        android:layout_height="250dp">
+
+    </ImageView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+      <!--Seek Bar-->
+      <SeekBar
+          android:id="@+id/seekbar"
+          android:layout_centerInParent="true"
+          android:layout_alignParentBottom="true"
+          android:layout_margin="20dp"
+          android:layout_marginBottom="40dp"
+          android:layout_width="250dp"
+          android:layout_height="wrap_content">
+
+      </SeekBar>
+      <!--Start time-->
+      <TextView
+          android:id="@+id/textsstart"
+          android:layout_toLeftOf="@+id/seekbar"
+          android:layout_centerInParent="true"
+          android:layout_alignParentLeft="false"
+
+          android:text="0:10"
+          android:textSize="14sp"
+          android:textColor="#fff"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+
+      </TextView>
+      <!--Stop Time-->
+      <TextView
+
+          android:id="@+id/textsstop"
+          android:layout_toRightOf="@+id/seekbar"
+          android:layout_centerInParent="true"
+          android:layout_alignParentRight="false"
+
+          android:text="3:10"
+          android:textSize="14sp"
+          android:textColor="#fff"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+
+      </TextView>
+    </RelativeLayout>
+
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+    android:layout_weight="3">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+      <!--Play BTN-->
+      <Button
+          android:id="@+id/playbtn"
+          android:layout_centerHorizontal="true"
+          android:background="@drawable/playico"
+          android:layout_width="100dp"
+          android:layout_height="100dp">
+
+      </Button>
+      <!--Next BTN-->
+      <Button
+          android:id="@+id/btnnext"
+          android:layout_toRightOf="@+id/playbtn"
+          android:layout_marginTop="30dp"
+          android:background="@drawable/nextbtn"
+          android:layout_width="50dp"
+          android:layout_height="50dp">
+
+      </Button>
+      <!--Previous BTN-->
+      <Button
+          android:id="@+id/btprev"
+          android:layout_toLeftOf="@+id/playbtn"
+          android:layout_marginTop="30dp"
+          android:background="@drawable/prebtn"
+          android:layout_width="50dp"
+          android:layout_height="50dp">
+
+      </Button>
+      <!--Fast Forward Btn-->
+      <Button
+          android:id="@+id/btnff"
+          android:layout_toRightOf="@+id/btnnext"
+          android:layout_marginTop="35dp"
+          android:layout_marginLeft="15dp"
+          android:background="@drawable/ffbtn"
+          android:layout_width="40dp"
+          android:layout_height="40dp">
+
+      </Button>
+      <!--Fast Reverse Btn-->
+      <Button
+          android:id="@+id/btnfr"
+          android:layout_toLeftOf="@+id/btprev"
+          android:layout_marginTop="35dp"
+          android:layout_marginRight="15dp"
+          android:background="@drawable/btnfr"
+          android:layout_width="40dp"
+          android:layout_height="40dp">
+
+      </Button>
+      <!--Audio Visualiser-->
+      <com.gauravk.audiovisualizer.visualizer.BarVisualizer
+          xmlns:custom="http://schemas.android.com/apk/res-auto"
+          android:id="@+id/bar"
+          android:layout_width="match_parent"
+          android:layout_height="90dp"
+          android:layout_alignParentBottom="true"
+          custom:avDensity="0.5"
+          custom:avWidth="4dp"
+          custom:avType="outline"
+          custom:avColor="#1A97FA"
+          custom:avSpeed="normal"/>
+    </RelativeLayout>
+  </LinearLayout>
+
+  </LinearLayout>
