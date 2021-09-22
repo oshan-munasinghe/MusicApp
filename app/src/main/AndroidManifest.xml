@@ -12,7 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MusicApp">
         <activity
+<<<<<<< HEAD
             android:name=".LoginForm"
+=======
+            android:name=".loginForm"
+>>>>>>> 64d2b6b892f04604ac06662b8f6d6481fe1543c1
             android:exported="true" />
         <activity
             android:name=".Player"
