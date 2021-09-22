@@ -25,7 +25,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     ListView listView;
     String[] items;
-
+//2021.09.21
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
