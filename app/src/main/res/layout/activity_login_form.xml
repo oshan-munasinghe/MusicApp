@@ -4,10 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
+
     tools:context=".LoginForm">
-=======
-    tools:context=".loginForm">
->>>>>>> 64d2b6b892f04604ac06662b8f6d6481fe1543c1
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
