@@ -102,10 +102,10 @@
       <!--Play BTN-->
       <Button
           android:id="@+id/playbtn"
-          android:layout_centerHorizontal="true"
-          android:background="@drawable/playico"
           android:layout_width="100dp"
-          android:layout_height="100dp">
+          android:layout_height="100dp"
+          android:layout_centerHorizontal="true"
+          android:background="@drawable/pauseico">
 
       </Button>
       <!--Next BTN-->
