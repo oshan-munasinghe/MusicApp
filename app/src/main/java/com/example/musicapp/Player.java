@@ -37,6 +37,14 @@ public class Player extends AppCompatActivity {
     Thread updateseekbar;
 
     @Override
+    protected void onDestroy() {
+        if (visualizer!=null){
+            visualizer.release();
+        }
+        super.onDestroy();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player);
@@ -137,7 +145,10 @@ public class Player extends AppCompatActivity {
                 }
             }
         });
-
+        int audiosessionId = mediaPlayer.getAudioSessionId();
+        if(audiosessionId!=-1){
+            visualizer.setAudioSessionId(audiosessionId);
+        }
 
         //next BTN
         btnnext.setOnClickListener(new View.OnClickListener() {
@@ -153,6 +164,7 @@ public class Player extends AppCompatActivity {
                 mediaPlayer.start();
                 btnplay.setBackgroundResource(R.drawable.pauseico);
                 startAnimation(imageView);
+
             }
         });
         //prev BTN
@@ -170,8 +182,11 @@ public class Player extends AppCompatActivity {
                 mediaPlayer.start();
                 btnplay.setBackgroundResource(R.drawable.pauseico);
                 startAnimation(imageView);
+
             }
         });
+
+
 
     }
     public void startAnimation(View view){
