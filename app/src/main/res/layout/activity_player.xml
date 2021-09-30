@@ -131,23 +131,23 @@
       <!--Fast Forward Btn-->
       <Button
           android:id="@+id/btnff"
-          android:layout_toRightOf="@+id/btnnext"
-          android:layout_marginTop="35dp"
-          android:layout_marginLeft="15dp"
-          android:background="@drawable/ffbtn"
           android:layout_width="40dp"
-          android:layout_height="40dp">
+          android:layout_height="40dp"
+          android:layout_marginLeft="25dp"
+          android:layout_marginTop="35dp"
+          android:layout_toRightOf="@+id/btnnext"
+          android:background="@drawable/playlist">
 
       </Button>
       <!--Fast Reverse Btn-->
       <Button
           android:id="@+id/btnfr"
-          android:layout_toLeftOf="@+id/btprev"
-          android:layout_marginTop="35dp"
-          android:layout_marginRight="15dp"
-          android:background="@drawable/btnfr"
           android:layout_width="40dp"
-          android:layout_height="40dp">
+          android:layout_height="40dp"
+          android:layout_marginTop="35dp"
+          android:layout_marginRight="25dp"
+          android:layout_toLeftOf="@+id/btprev"
+          android:background="@drawable/icshuff">
 
       </Button>
       <!--Audio Visualiser-->
