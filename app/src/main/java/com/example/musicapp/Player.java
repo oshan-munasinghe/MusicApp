@@ -164,6 +164,10 @@ public class Player extends AppCompatActivity {
                 mediaPlayer.start();
                 btnplay.setBackgroundResource(R.drawable.pauseico);
                 startAnimation(imageView);
+                int audiosessionId = mediaPlayer.getAudioSessionId();
+                if(audiosessionId!=-1){
+                    visualizer.setAudioSessionId(audiosessionId);
+                }
 
             }
         });
@@ -182,6 +186,10 @@ public class Player extends AppCompatActivity {
                 mediaPlayer.start();
                 btnplay.setBackgroundResource(R.drawable.pauseico);
                 startAnimation(imageView);
+                int audiosessionId = mediaPlayer.getAudioSessionId();
+                if(audiosessionId!=-1){
+                    visualizer.setAudioSessionId(audiosessionId);
+                }
 
             }
         });
