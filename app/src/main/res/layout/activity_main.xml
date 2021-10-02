@@ -1,22 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".MainActivity">
+    android:background="#171717"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+<!--App Bar custom-->
+    <LinearLayout
 
-    <ListView
-        android:id="@+id/listViewSong"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:background="#058FFD">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/menu"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+        >
+
+        </ImageView>
+
+    <TextView
+        android:id="@+id/allSong"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="All Songs"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:paddingTop="10dp"
+        android:layout_marginLeft="100dp"
+        >
+
+    </TextView>
+
+        <ImageView
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="50dp"
+            android:paddingTop="15dp"
+            android:src="@drawable/search"
+
+
+
+            >
+
+        </ImageView>
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="#171717">
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:src="@drawable/love"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="10dp"
+            >
+
+        </ImageView>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:src="@drawable/history"
+            android:layout_marginTop="10dp"
+            >
+
+        </ImageView>
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="10.0sp"
-        android:padding="8dp"
-        tools:ignore="MissingConstraints" >
+        android:orientation="vertical">
+        <ListView
+            android:id="@+id/listViewSong"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10.0sp"
+            android:padding="8dp"
+            tools:ignore="MissingConstraints">
+
+        </ListView>
 
 
-    </ListView>
 
-</RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
